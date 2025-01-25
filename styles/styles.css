@@ -34,7 +34,7 @@ body {
 .header__menu__link {
     color: var(--color-terciario);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: var(--fuente-montserrat);
 }
@@ -48,22 +48,27 @@ body {
     align-items: center;
     padding: 6% 5%;
     justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__imagen {
+    width: 50%;
 }
 
 .presentacion__contenido {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .presentacion__contenido__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family:var(--fuente-krona);
 }
 
 .presentacion__contenido__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
 }
 
@@ -77,19 +82,19 @@ body {
 
 .presentacion__enlaces__subtitulo {
     font-family: var(--fuente-krona);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .presentacion__enlaces__link {
-    width: 378px;
+    width: 50%;
     border: 2px solid var(--color-terciario);
     color: var(--color-secundario);
     text-align:center;
     padding: 21.5px 0px;
     border-radius: 8px;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
     display: flex;
@@ -102,12 +107,31 @@ body {
 }
 
 .footer {
-    padding: 24px;
+    padding: 1.5rem;
     background-color:var(--color-terciario);
     color:var(--color-primario);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
     text-align: center;
     font-weight: 400;
 }
 
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse; /*para que la imagen no se vaya hacia abajo pongo reverse*/
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: auto; /*se adapta al elemento padre*/
+    }
+}
